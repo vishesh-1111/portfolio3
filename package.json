@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "npm run build  && touch ./out/.nojekyll && gh-pages -d out -t true"
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@react-email/components": "^0.0.7",
