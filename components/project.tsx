@@ -1,17 +1,21 @@
 "use client";
 
 import { useRef } from "react";
-import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { properties } from "./constants/data";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = (typeof properties)[number];
 
 export default function Project({
+  id,
   title,
   description,
   tags,
   imageUrl,
+  imagesrc,
+  GithubUrl,
+  ProjectUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -49,7 +53,7 @@ export default function Project({
         </div>
 
         <Image
-          src={imageUrl}
+          src="a"
           alt="Project I worked on"
           quality={95}
           className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
