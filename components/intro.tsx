@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import TypeWriterEffect from 'react-typewriter-effect';
+import TypeWriterEffect from './TW/typewriter';
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);

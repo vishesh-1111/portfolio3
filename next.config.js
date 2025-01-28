@@ -11,9 +11,7 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    serverActions: true,
-  },
+
   reactStrictMode: true,
   images: {
     unoptimized: true, // Disable default image optimization
