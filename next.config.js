@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  output: "export", 
   images: {
     remotePatterns: [
       {
@@ -12,13 +10,11 @@ const nextConfig = {
     ],
   },
 
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProd ? '/vishesh-1111.github.io/' : '',
-  basePath: isProd ? '/vishesh-1111.github.io' : '',
-  
+
 };
 
 module.exports = nextConfig;
